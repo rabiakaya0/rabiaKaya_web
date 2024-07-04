@@ -1,0 +1,17 @@
+{% extends 'partials/_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block content %} 
+
+{% endblock content %}
+
+{% block extra_javascript %}
+
+    <!--Morris Chart-->
+    <script src="{% static 'libs/morris.js/morris.min.js' %}"></script>
+    <script src="{% static 'libs/raphael/raphael.min.js' %}"></script>
+
+    <script src="{% static 'js/pages/dashboard.init.js' %}"></script>
+
+{% endblock extra_javascript %}
