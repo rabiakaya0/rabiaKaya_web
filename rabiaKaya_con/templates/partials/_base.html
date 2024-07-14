@@ -6,10 +6,8 @@
     <meta charset="utf-8" />
     <title> {% block title %} {% endblock title %} | Rabia Kaya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{% static 'images/logo-sm.png' %}">
+    <link rel="shortcut icon" href="{% static 'images/acAyi.png' %}">
 
     {% block css %}
     {% block extra_css %}
@@ -21,47 +19,26 @@
     <link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{% static 'css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- Benim Css-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
 
     {% endblock css %}
 
 </head>    
 
-{% block body %}
-    <body data-sidebar="dark">
-{% endblock body %}
+<body>    
+    
+    {% block navbar %}
+    {% include "partials/_navbar.html" %}
+    {% endblock navbar %}
 
-
-    <!-- start layout -->
-    <div id="layout-wrapper">
-
-        {% comment %} {% block horizontal %}
-        {% include "partials/horizontal.html" with pagetitle="Lexa" subtitle="Horizontal" title="Horizontal" %}
-        {% endblock horizontal %}  {% endcomment %}
-
-        <div class="main-content">
-
-            <div class="page-content">
-                <div class="container-fluid">
-
-                    {% block content %} 
-                    {% endblock content %}
-
-                </div>
-                <!-- container-fluid -->
-            </div>
-            <!-- End Page-content -->
-
-            {% block footer %}
-            {% include "partials/_footer.html" %}
-            {% endblock footer %}
-
-        </div>
-        <!-- end main content-->
-    </div>
-    <!-- end layout wrapper -->
-
-    {% block extra_content %}
-    {% endblock extra_content %}
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    
+    {% block footer %}
+    {% include "partials/_footer.html" %}
+    {% endblock footer %}
 
     {% block javascript %}
 
@@ -73,8 +50,11 @@
         <script src="{% static 'libs/node-waves/dist/waves.min.js' %}"></script>
         <script src="{% static 'libs/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
 
-        {% block extra_javascript %}
-        {% endblock extra_javascript %}
+        <!--Morris Chart-->
+        <script src="{% static 'libs/morris.js/morris.min.js' %}"></script>
+        <script src="{% static 'libs/raphael/raphael.min.js' %}"></script>
+    
+        <script src="{% static 'js/pages/dashboard.init.js' %}"></script>
 
         <!-- App js -->
         <script src="{% static 'js/app.js' %}"></script>

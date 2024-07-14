@@ -1,0 +1,52 @@
+body {
+    /* background-image: url('/static/images/background.jpg');  */
+    background-color: #ffffff;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+footer {
+    left:0 !important;
+    background-color: #000000 !important;
+}
+
+.powered-text {
+        color: rgb(255, 255, 255);
+}
+
+.navbar {
+    background-color: #000000;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    color: #e6ccff;
+    background-color: initial;
+}
+
+.navbar-brand,
+.nav-link:focus,
+.nav-link:active {
+    color: #ffffff !important; 
+}
+
+.carousel-item {
+  height: 800px; /* Carousel yüksekliğini belirleyin */
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Görsellerin aynı boyutta kalmasını sağlar */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%; /* Ok işaretlerinin çevresinde alan bırakmak için genişlik belirleyin */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Siyah arka plan ekleyin */
+  border-radius: 50%; /* Ok işaretlerini yuvarlak yapın */
+  padding: 10px; /* Ok işaretlerinin çevresinde boşluk oluşturun */
+}
