@@ -3,8 +3,43 @@
 {% block title %} Elektronik {% endblock title %}
 
 {% block content %} 
-<h1>
-  ELEKTRONİK
-</h1>
 
+<div class="intro-area">
+  <h1> ELEKTRONİK </h1>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In numquam aspernatur quae laudantium consequuntur, nulla sit asperiores non qui praesentium repellendus! Totam molestias aliquam consequuntur, accusantium dignissimos soluta officiis cum repudiandae, incidunt perspiciatis est nemo magni reiciendis officia ullam fuga placeat nihil sapiente dolores? Voluptatum, ullam tempore. Molestiae, voluptas ipsa.
+</div>
+<div style="margin-left: 50px; margin-right: 50px;">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <img src="{% static 'images/kedi.jpg' %}" class="d-block w-100" alt="...">
+        <div class="divider"></div>
+        Lorem ipsum dolor sit amet.
+        <div class="divider"></div>
+        18.11.2024
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img src="{% static 'images/kedi.jpg' %}" class="d-block w-100" alt="...">
+        <div class="divider"></div>
+        Lorem ipsum dolor sit amet.
+        <div class="divider"></div>
+        18.11.2024
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <img src="{% static 'images/kedi.jpg' %}" class="d-block w-100" alt="...">
+        <div class="divider"></div>
+        Lorem ipsum dolor sit amet.
+        <div class="divider"></div>
+        18.11.2024
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/main.css' %}">
+{% endblock extra_css %}

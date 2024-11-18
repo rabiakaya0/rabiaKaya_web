@@ -3,8 +3,40 @@
 {% block title %} İletişim {% endblock title %}
 
 {% block content %} 
-<h1>
-  İLETİŞİM
-</h1>
+<div class="form-container">
+    <form id="myForm" method="POST" role="form" class="form-horizontal">
+        {% csrf_token %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
 
+        {% for field in contact_form %}
+            <div class="mb-3 row">
+                <label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.field.widget.attrs.label }}:</label>
+                <div class="col-sm-10">
+                    {{ field }}
+                    
+                    {% if field.name == 'mesaj' %}
+                        <div class="text-end mt-1">
+                            <small id="charCount">0 / 500</small>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary d-none d-sm-inline-block">Gönder</button>
+        </div>
+    </form>
+</div>
+<script src="{% static 'js/contact/iletisim.js' %}"></script>
 {% endblock content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact/iletisim.css' %}">
+{% endblock extra_css %}

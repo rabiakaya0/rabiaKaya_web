@@ -1,0 +1,44 @@
+body {
+    background-color: #3b3b3b !important;
+}
+
+.intro-area {
+    background-color: #e6d8ff !important; 
+    border-radius: 50px;
+    color: #161616; 
+    padding: 20px 20px; 
+    text-align: center;
+    font-family: 'Source Code Pro', sans-serif; 
+    border-bottom: 2px solid #ccc;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6; 
+    margin: 50px; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.intro-area .h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card {
+    background-color: #e6d8ff !important; 
+    border-radius: 10px !important;
+    margin: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 20px; 
+    text-align: center;
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.divider {
+    width: 100%; /* Çizginin genişliği */
+    height: 2px; /* Çizgi kalınlığı */
+    background-color: #1b1b1b; /* Çizgi rengi */
+    margin: 20px auto; /* Çizgiyi ortalar */
+}

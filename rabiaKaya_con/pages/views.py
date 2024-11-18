@@ -20,6 +20,3 @@ class SoftwareUnityView(TemplateView):
 
 class SoftwareDjangoView(TemplateView):
     template_name = 'yazilimDjango.html'
-
-class ContactView(TemplateView):
-    template_name = 'iletisim.html'
